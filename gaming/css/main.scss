@@ -69,7 +69,7 @@ html {
    scroll-behavior: smooth;
 }
 
-body,
+
 button,
 input {
    font-family: var(--body-font);
@@ -87,8 +87,7 @@ h2,
 h3,
 h4,
 h5 {
-   color: var(--clr-light);
-   font-size: var(--normal-font-size);
+   font-weight: var(--font-semi-bold);
 }
 
 ul {
@@ -96,7 +95,7 @@ ul {
 }
 
 a {
-   text-decoration: var(--normal-font-size);
+   text-decoration: none;
 }
 
 img {
@@ -113,8 +112,7 @@ button {
 /*=============== REUSABLE CSS CLASSES ===============*/
 .container {
    max-width: 968px;
-   margin-left: var(--mb-1-5);
-   margin-right: var(--mb-1-5);
+   margin: 0 auto;
 }
 
 .grid {
@@ -130,7 +128,7 @@ button {
 .nav {
    justify-content: space-between;
    align-items: center;
-   height: 10vh;
+  height: var(--header-height);
 
    &__logo {
       place-items: center;
@@ -204,8 +202,9 @@ button {
       }
 
       h1 {
-         font-size: 3rem;
+         font-size: var(--h1-font-size);
          font-weight: bold;
+         color: #fff;
          margin-bottom: var(--mb-2);
       }
       button {
@@ -256,12 +255,13 @@ main {
 /*=============== CURRENT GAMES ===============*/
 
 .current {
-   margin-bottom: var(--mb-2-5);
+   margin-bottom: 8em;
    &__header {
       justify-content: space-between;
       margin-bottom: var(--mb-2);
       h2 {
          font-size: var(--h2-font-size);
+         color: #fff;
       }
       button {
          background-color: var(--first-color-alt);
@@ -272,15 +272,12 @@ main {
    }
 
    &__container {
-      max-width: 1200px;
       width: 100%;
-      height: 400px;
       gap: 2rem;
    }
 
    &__card {
       width: 200px;
-      height: 300px;
       text-align: center;
       color: var(--clr-light);
 
@@ -291,11 +288,14 @@ main {
          height: 100%;
          border-radius: 0.5em;
       }
+      p{
+         font-size: var(--small-font-size);
+      }
    }
 
    &__imgcontainer {
       position: relative;
-      height: 300px;
+      height: 250px;
       margin-bottom: var(--mb-0-5);
 
       .span {
@@ -332,7 +332,7 @@ main {
    width: 100%;
    position: relative;
    height: 70vh;
-   margin-bottom: var(--mb-2-5);
+   margin-bottom: 11em;
 
    .backimg {
       position: absolute;
@@ -356,6 +356,7 @@ main {
       justify-content: space-between;
       margin-bottom: var(--mb-2);
       h2 {
+         color: #fff;
          font-size: var(--h2-font-size);
       }
       button {
@@ -387,7 +388,7 @@ main {
    &__card {
       gap: 1em;
       &:nth-child(1) {
-         height: 500px;
+         height: 450px;
          grid-row-start: 1;
          grid-row-end: 3;
 
@@ -435,8 +436,9 @@ main {
       }
 
       h5 {
-         font-size: var(--h3-font-size);
+         font-size: var(--h4-font-size);
          margin-bottom: var(--mb-0-5);
+         color: #fff;
       }
 
       p {
@@ -460,8 +462,8 @@ main {
    }
 
    .sub {
-      width: 100px !important;
-      height: 130px !important;
+      width: 80px !important;
+      height: 120px !important;
       object-fit: cover;
       border-radius: 0 10px 0 0;
    }
@@ -472,6 +474,7 @@ main {
       justify-content: space-between;
       margin-bottom: var(--mb-2);
       h2 {
+         color: #fff;
          font-size: var(--h2-font-size);
       }
       button {
@@ -488,8 +491,8 @@ main {
    }
 
    &__container {
-      grid-template-columns: 2fr 1fr;
-      gap: 1em;
+      grid-template-columns: 1.6fr 1fr;
+      gap: 2em;
       align-items: flex-start;
    }
 
@@ -522,6 +525,7 @@ main {
       height: 300px;
       h2 {
          margin-top: 1em;
+         color: #fff;
          margin-bottom: var(--mb-0-5);
          font-size: var(--h3-font-size);
       }
@@ -552,6 +556,7 @@ main {
       h4 {
          font-size: var(--h3-font-size);
          margin-bottom: var(--mb-1);
+         color: #fff;
       }
 
       p {
@@ -593,9 +598,5 @@ main {
 
 /* For large devices */
 @media screen and (min-width: 992px) {
-   .container {
-      max-width: 1200px;
-      margin-left: auto;
-      margin-right: auto;
-   }
+ 
 }
