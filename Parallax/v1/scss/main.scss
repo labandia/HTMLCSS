@@ -1,0 +1,82 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,900;1,100;1,200;1,300;1,400;1,500&display=swap");
+
+* {
+   margin: 0;
+   padding: 0;
+}
+
+@mixin text-align {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+body {
+   font-family: "Raleway", sans-serif;
+   font-size: 3em;
+   color: hsl(0, 0%, 100%);
+}
+
+.parallex_wrapper {
+   height: 100vh;
+   overflow-x: hidden;
+   overflow-y: auto;
+   perspective: 300px;
+
+   .intro_screen {
+      height: 100vh;
+      background-color: tomato;
+      @include text-align;
+   }
+
+   .outro_screen {
+      height: 100vh;
+      background-color: teal;
+      @include text-align;
+   }
+
+   .parallex_group {
+      position: relative;
+      height: 100vh;
+      transform-style: preserve-3d;
+      .parallex_layer {
+         position: absolute;
+         inset: 0;
+         @include text-align;
+      }
+      .base_layer {
+         //scale calculation: 1 + ((Z transform value * -1 / perspective))
+         transform: translateZ(-300px) scale(2);
+      }
+
+      .mid_layer {
+         transform: translateZ(0);
+      }
+
+      .top_layer {
+         transform: translateZ(210px) scale(0.3);
+      }
+   }
+
+   #intro {
+      z-index: 0;
+   }
+
+   #group-1 {
+      z-index: -1;
+   }
+
+   #group-1 > .base_layer {
+      background-color: crimson;
+   }
+
+   #group-2 {
+   }
+
+   #group-2 > .mid_layer {
+      background-color: yellowgreen;
+   }
+
+   #outro {
+   }
+}

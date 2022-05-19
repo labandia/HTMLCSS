@@ -1,0 +1,100 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,900;1,100;1,200;1,300;1,400;1,500&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Raleway", sans-serif;
+  font-size: 3em;
+  color: white;
+}
+
+.parallex_wrapper {
+  height: 100vh;
+  overflow-x: hidden;
+  overflow-y: auto;
+  -webkit-perspective: 300px;
+          perspective: 300px;
+}
+
+.parallex_wrapper .intro_screen {
+  height: 100vh;
+  background-color: tomato;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.parallex_wrapper .outro_screen {
+  height: 100vh;
+  background-color: teal;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.parallex_wrapper .parallex_group {
+  position: relative;
+  height: 100vh;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+}
+
+.parallex_wrapper .parallex_group .parallex_layer {
+  position: absolute;
+  inset: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.parallex_wrapper .parallex_group .base_layer {
+  -webkit-transform: translateZ(-300px) scale(2);
+          transform: translateZ(-300px) scale(2);
+}
+
+.parallex_wrapper .parallex_group .mid_layer {
+  -webkit-transform: translateZ(0);
+          transform: translateZ(0);
+}
+
+.parallex_wrapper .parallex_group .top_layer {
+  -webkit-transform: translateZ(210px) scale(0.3);
+          transform: translateZ(210px) scale(0.3);
+}
+
+.parallex_wrapper #intro {
+  z-index: 0;
+}
+
+.parallex_wrapper #group-1 {
+  z-index: -1;
+}
+
+.parallex_wrapper #group-1 > .base_layer {
+  background-color: crimson;
+}
+
+.parallex_wrapper #group-2 > .mid_layer {
+  background-color: yellowgreen;
+}
+/*# sourceMappingURL=main.css.map */
