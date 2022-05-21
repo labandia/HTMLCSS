@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>  
+    <div class="container">
+        <div class="frontdisplay">
+            <div class="frontdisplay__header">
+                <h1 id="clockdisplay">09:21</h1>
+                <div class="frontdisplay__num">
+                    <p id="sec" class="am"></p>
+                    <p  id="sessions"></p>
+                </div>
+            </div>
+           
+            <p id="calendar"></p>
+
+
+            <div class="frontdisplay__weather">
+                <h2>28 <span>&#176;</span>  C</h2>
+                <div class="frontdisplay__country">
+                    <p>Sunny</p>
+                    <p>Philippines, Manila</p>
+                </div>
+            </div>
+        </div>  
+
+        <div class="todolist">
+            <div class="todolist__header">
+                <h2>To do List</h2>
+
+                <form class="todolist__input">
+                    <input class="todoinput" type="text" placeholder="Add a list ...">
+                    <button class="todobutton">+</button>
+                </form>
+
+                <div class="todolist__container">
+                    <ul class="todolist__list">
+                        <!-- <li>sdsd</li> -->
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="clock.js"></script>
+    <script src="todolist.js"></script>
+</body>
+</html>

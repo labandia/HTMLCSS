@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+
+    <div class="calcu">
+         <div class="calcu__header">
+             <div data-previous class="previous"></div>
+             <span data-current>0</span>
+         </div>   
+         <div class="calcu__body">
+             <div class="calcu__row">
+                <button data-allclear style="color: rgb(1, 165, 83);">C</button>
+                <button data-delete style="color: crimson;" >X</button>
+                <button data-operation>%</button>
+                <button data-operation>/</button>   
+             </div>
+
+             <div class="calcu__row">
+                <button data-number>7</button>
+                <button data-number>8</button>
+                <button data-number>9</button>    
+                <button data-operation>x</button>    
+             </div>
+
+             <div class="calcu__row">
+                <button data-number>4</button>
+                <button data-number>5</button>
+                <button data-number>6</button>    
+                <button data-operation>-</button>    
+             </div>
+
+             <div class="calcu__endrow">
+                 <div class="calcu__action">
+                    <button data-number>1</button>
+                    <button data-number>2</button>
+                    <button data-number>3</button>
+                    <button data-number>.</button>
+                    <button data-number>0</button>
+                    <button data-equal>=</button>
+                 </div>
+                 <button data-operation class="calcu__add">+</button>
+             </div>
+
+         </div>    
+    </div>
+
+    <h1>Simple calculator app</h1>
+
+
+    <script src="cal.js"></script>
+</body>
+</html>
