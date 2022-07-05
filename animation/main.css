@@ -1,0 +1,204 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (50%)[2];
+      grid-template-columns: repeat(2, 50%);
+  width: 100%;
+  min-height: 100vh;
+  overflow: hidden;
+  background-color: #222;
+  font-family: 'Montserrat';
+}
+
+.box, .circle {
+  width: 120px;
+  height: 120px;
+}
+
+.box, .circle {
+  background-color: tomato;
+}
+
+.circle {
+  border-radius: 50%;
+}
+
+.elastic {
+  -webkit-animation-timing-function: cubic-bezier(0.8, -0.6, 0.2, 1.5);
+          animation-timing-function: cubic-bezier(0.8, -0.6, 0.2, 1.5);
+}
+
+.linear {
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+}
+
+.wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border: 1px solid #585858;
+  gap: 1.5em;
+}
+
+.wrapper p {
+  color: #fff;
+  font-weight: 500;
+  letter-spacing: .2em;
+}
+
+.wrapper .box2 {
+  -webkit-animation: spin 2s infinite;
+          animation: spin 2s infinite;
+}
+
+.wrapper .box3 {
+  -webkit-animation: resize 2s infinite;
+          animation: resize 2s infinite;
+}
+
+.wrapper .box4 {
+  -webkit-animation: fade 2s infinite;
+          animation: fade 2s infinite;
+}
+
+.wrapper .circle {
+  -webkit-animation: move 2s infinite;
+          animation: move 2s infinite;
+}
+
+@-webkit-keyframes move {
+  0% {
+    -webkit-transform: translateX(-250px);
+            transform: translateX(-250px);
+  }
+  40% {
+    -webkit-transform: translateX(50px);
+            transform: translateX(50px);
+  }
+  60% {
+    -webkit-transform: translateX(50px);
+            transform: translateX(50px);
+  }
+  100% {
+    -webkit-transform: translateX(250px);
+            transform: translateX(250px);
+  }
+}
+
+@keyframes move {
+  0% {
+    -webkit-transform: translateX(-250px);
+            transform: translateX(-250px);
+  }
+  40% {
+    -webkit-transform: translateX(50px);
+            transform: translateX(50px);
+  }
+  60% {
+    -webkit-transform: translateX(50px);
+            transform: translateX(50px);
+  }
+  100% {
+    -webkit-transform: translateX(250px);
+            transform: translateX(250px);
+  }
+}
+
+@-webkit-keyframes spin {
+  to {
+    -webkit-transform: rotate(1turn);
+            transform: rotate(1turn);
+  }
+}
+
+@keyframes spin {
+  to {
+    -webkit-transform: rotate(1turn);
+            transform: rotate(1turn);
+  }
+}
+
+@-webkit-keyframes resize {
+  0%, 40%, 100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  25%, 60% {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+  }
+}
+
+@keyframes resize {
+  0%, 40%, 100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  25%, 60% {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+  }
+}
+
+@-webkit-keyframes fade {
+  0% {
+    -webkit-transform: translateX(-250px);
+            transform: translateX(-250px);
+    opacity: 0;
+  }
+  40% {
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
+    opacity: 1;
+  }
+  60% {
+    -webkit-transform: translateX(10px);
+            transform: translateX(10px);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: translateX(-250px);
+            transform: translateX(-250px);
+    opacity: 0;
+  }
+}
+
+@keyframes fade {
+  0% {
+    -webkit-transform: translateX(-250px);
+            transform: translateX(-250px);
+    opacity: 0;
+  }
+  40% {
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
+    opacity: 1;
+  }
+  60% {
+    -webkit-transform: translateX(10px);
+            transform: translateX(10px);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: translateX(-250px);
+            transform: translateX(-250px);
+    opacity: 0;
+  }
+}
+/*# sourceMappingURL=main.css.map */
